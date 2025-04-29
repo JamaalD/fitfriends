@@ -264,7 +264,6 @@ opencv-contrib-python==4.11.0.86
 opencv-python==4.11.0.86
 openjpeg==2.4.0
 openpyxl==3.0.10
-openssl==1.1.1q
 opt-einsum==3.4.0
 packaging==21.3
 pandas==1.4.4
