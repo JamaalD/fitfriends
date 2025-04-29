@@ -1,1 +1,2 @@
 worker: python alpha.py
+release: pip install --upgrade pip setuptools wheel
