@@ -239,16 +239,13 @@ def analyse_frame(frame, pose, workout, phase, reps, last_feedback):
         elif workout == "pushup":
             _, left_elbow_angle = angles.get("elbow", (None, 180))
             feedback = "make sure to control your movement"
-            angles = get_relevant_joints("squat", landmarks)
-            _, left_hip_angle = angles.get("hip", (None, 180))
+            
 
 
             if phase == 1:
                 if 140 < left_elbow_angle < 160:
                     phase = 2 
                  
-            elif left_hip_angle <=160:
-                feedback = "keep your body straight"
 
             elif phase == 2 and left_elbow_angle <= 110:
                 phase = 4  
