@@ -198,6 +198,7 @@ def analyse_frame(frame, pose, workout, phase, reps, last_feedback):
             if phase == 1:
                 if 130 < left_hip_angle < 160 and 130 < left_knee_angle < 160:
                     phase = 2  
+                    
                    
                     
             elif (LKX>=LFX*1.15):
@@ -240,40 +241,48 @@ def analyse_frame(frame, pose, workout, phase, reps, last_feedback):
             angles = get_relevant_joints("pushup", landmarks)
             _, left_elbow_angle = angles.get("elbow", (None, 180))
             feedback = "make sure to control your movement"
+            print("phase none")
             
 
 
             if phase == 1:
                 if 140 < left_elbow_angle < 160:
                     phase = 2 
+                    print("phase 1")
                  
 
             elif phase == 2 and left_elbow_angle <= 110:
                 phase = 4  
+                print("phase 2")
     
                         
             elif phase == 4 and (left_elbow_angle <= 90):
                 phase = 3  
                 feedback = "Great form! Push back up with control."
+                print("phase 4a")
 
 
             elif phase == 3 and left_elbow_angle >= 110:
                 phase = 5  
+                print("phase 3")
 
     
             elif phase == 4 and left_elbow_angle >= 120:
                 phase = 1 
                 feedback = "Make sure to go all the way down for a full push-up!"
+                print("phase 4b")
             
 
             elif phase == 5 and left_elbow_angle >= 150:
                 phase = 1  
                 reps += 1  
                 feedback = "Great form!, keep your core tight."
+                print("phase 5")
                 
 
             else:
                 feedback = last_feedback
+                print("phase empty")
         
         elif workout == "situp":
             _, left_hip_angle = angles.get("hip", (None, 180))
