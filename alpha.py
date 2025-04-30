@@ -254,7 +254,7 @@ def analyse_frame(frame, pose, workout, phase, reps, last_feedback):
                 phase = 4  
     
                         
-            elif phase == 4 and (left_elbow_angle <= 60):
+            elif phase == 4 and (left_elbow_angle <= 90):
                 phase = 3  
                 feedback = "Great form! Push back up with control."
 
@@ -296,7 +296,7 @@ def analyse_frame(frame, pose, workout, phase, reps, last_feedback):
     
                         
                         
-            elif phase == 4 and (left_hip_angle <= 40):
+            elif phase == 4 and (left_hip_angle <= 55):
                 phase = 3  
                 feedback = "Great form! Lower back down slowly."
 
