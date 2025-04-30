@@ -247,8 +247,8 @@ def analyse_frame(frame, pose, workout, phase, reps, last_feedback):
                 if 140 < left_elbow_angle < 160:
                     phase = 2 
                  
-            #if left_hip_angle <=160:
-             #   feedback = "keep your body straight"
+            elif left_hip_angle <=160:
+                feedback = "keep your body straight"
 
             elif phase == 2 and left_elbow_angle <= 110:
                 phase = 4  
@@ -288,7 +288,7 @@ def analyse_frame(frame, pose, workout, phase, reps, last_feedback):
                 if 70 < left_hip_angle < 90:
                     phase = 2 
                 
-            if left_knee_angle >= 110:
+            elif left_knee_angle >= 110:
                 feedback = "bend your knees more"
             
             elif phase == 2 and left_hip_angle <= 60:
