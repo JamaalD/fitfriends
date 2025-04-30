@@ -243,10 +243,24 @@ def analyse_frame(frame, pose, workout, phase, reps, last_feedback):
             feedback = "make sure to control your movement"
             print("phase none")
             print(f"Current elbow angle: {left_elbow_angle}")
+            left_shoulder = landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER.value]
+            left_elbow = landmarks[mp_pose.PoseLandmark.LEFT_ELBOW.value]
+            left_wrist = landmarks[mp_pose.PoseLandmark.LEFT_WRIST.value]
+            
+            right_shoulder = landmarks[mp_pose.PoseLandmark.RIGHT_SHOULDER.value]
+            right_elbow = landmarks[mp_pose.PoseLandmark.RIGHT_ELBOW.value]
+            right_wrist = landmarks[mp_pose.PoseLandmark.RIGHT_WRIST.value]
+            
+            # Calculate both left and right elbow angles
+            _, left_elbow_angle = calculate_angle(
+                left_shoulder.x, left_shoulder.y,
+                left_elbow.x, left_elbow.y,
+                left_wrist.x, left_wrist.y
+            )
             
             # Check visibility
             elbow_visibility = landmarks[mp_pose.PoseLandmark.LEFT_ELBOW.value].visibility
-            print(f"Elbow visibility: {elbow_visibility}")
+            print(f"Elbow visibility: {elbow_visibility}. Elbow visibility: {left_elbow_angle} ")
             
 
 
