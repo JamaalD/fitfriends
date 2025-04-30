@@ -246,7 +246,7 @@ def analyse_frame(frame, pose, workout, phase, reps, last_feedback):
             
             # Check visibility
             elbow_visibility = landmarks[mp_pose.PoseLandmark.LEFT_ELBOW.value].visibility
-            print(f"Elbow visibility: {elbow_visibility}"
+            print(f"Elbow visibility: {elbow_visibility}")
             
 
 
