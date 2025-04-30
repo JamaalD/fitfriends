@@ -246,7 +246,7 @@ def analyse_frame(frame, pose, workout, phase, reps, last_feedback):
 
 
             if phase == 1:
-                if 140 < left_elbow_angle < 160:
+                if left_elbow_angle < 180:
                     phase = 2 
                     print("phase 1")
                 print("phase none 1")
