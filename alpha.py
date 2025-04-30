@@ -237,6 +237,7 @@ def analyse_frame(frame, pose, workout, phase, reps, last_feedback):
                 feedback = last_feedback
 
         elif workout == "pushup":
+            angles = get_relevant_joints("pushup", landmarks)
             _, left_elbow_angle = angles.get("elbow", (None, 180))
             feedback = "make sure to control your movement"
             
