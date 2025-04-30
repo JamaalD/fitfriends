@@ -249,6 +249,7 @@ def analyse_frame(frame, pose, workout, phase, reps, last_feedback):
                 if 140 < left_elbow_angle < 160:
                     phase = 2 
                     print("phase 1")
+                print("phase none 1")
                  
 
             elif phase == 2 and left_elbow_angle <= 110:
