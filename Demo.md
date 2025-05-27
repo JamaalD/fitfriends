@@ -1,5 +1,5 @@
 here is a tutorial on the applciation taking you through how the squat workout will be completed 
-
+ 
 It consists of three screens and a link to a video of the actual workout as github does not allow videos over a certain size.
 
 welcome screen:
